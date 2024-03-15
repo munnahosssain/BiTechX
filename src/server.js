@@ -4,11 +4,10 @@ const colors = require("colors");
 const app = require("./app");
 
 // imported all routes
-// const authRoutes = require("./routes/v1/auth.route");
-
+const authRoutes = require("./routes/v1/auth.route");
 
 //TODO: add here auth routes
-// app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/auth", authRoutes);
 
 const port = process.env.PORT || 8080;
 
