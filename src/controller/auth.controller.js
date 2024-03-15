@@ -83,7 +83,7 @@ exports.getUserById = async (req, res) => {
 };
 
 // update user controller
-export const updateUser = asyncHandler(async (req, res) => {
+exports.updateUser = async (req, res) => {
   const user = await User.findById(req.params.id);
 
   if (user) {
@@ -97,10 +97,10 @@ export const updateUser = asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("USer Not Found");
   }
-});
+};
 
 // get user by id controller
-export const getUserById = asyncHandler(async (req, res) => {
+exports.getUserById = async (req, res) => {
   const user = await User.findById(req.params.id);
 
   if (user) {
@@ -109,10 +109,10 @@ export const getUserById = asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("User Not Found");
   }
-});
+};
 
 // delete user by id controller
-export const deleteUser = asyncHandler(async (req, res) => {
+exports.deleteUser = async (req, res) => {
   const user = await User.findById(req.params.id);
 
   if (user) {
@@ -122,4 +122,4 @@ export const deleteUser = asyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("User Not Found");
   }
-});
+};
